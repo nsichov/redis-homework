@@ -1,6 +1,5 @@
 ## Prerequirements?
-Java 8 or higer / Maven are installed
-Redis server is already running on port `6379`
+Java 8  Maven are installed. Redis server is already running on port `6379`
 
 
 ## How to run project?

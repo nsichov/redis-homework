@@ -1,9 +1,11 @@
 ## Prerequirements?
-Java 8  Maven are installed. Redis server is already running on port `6379`
+Java, Maven and Docker are installed.
 
+## How to run project locally?
+Start Redis server on port `6379`. Run app either using RedisHomeworkApplication in IDEA or from console `mvn spring-boot:run`
 
-## How to run project?
-To run app you either start from IDEA by running RedisHomeworkApplication or from console `mvn spring-boot:run`
+## How to run project inside docker?
+To run inside docker run `docker-compose build` and after that `docker-compose up`. App should be available on port :8080
 
 ## What endpoints are available?`
 ```

@@ -15,11 +15,11 @@ GET /redis/getByTime?start={your_start_date}&end={your_end_date} - return messag
 
 ## Response example
  ```
- {
-"id": 1,
-"channel": "test-channel",
-"text": "Hello wrold123",
-"timestamp": "2021-01-04T15:23:48.515+00:00"
+{
+"id": 3,
+"channel": "test",
+"text": "third test",
+"timestamp": 1609774804000
 }
 ```
 

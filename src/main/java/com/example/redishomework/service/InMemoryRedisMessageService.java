@@ -18,14 +18,14 @@ public class InMemoryRedisMessageService implements RedisMessageService {
     }
 
     @Override
-    public List<RedisMessage> getBetween(Date start, Date end) {
+    public List<RedisMessage> getBetween(Long start, Long end) {
         return messages.stream()
-                .filter(message -> message.getTimestamp().after(start) && message.getTimestamp().before(end))
+                .filter(message -> message.getTimestamp() > start && message.getTimestamp() < end)
                 .collect(Collectors.toList());
     }
 
     @Override
     public void add(Message message) {
-        messages.add(new RedisMessage( new String(message.getChannel()), new String(message.getBody()), new Date()));
+        messages.add(new RedisMessage( new String(message.getChannel()), new String(message.getBody()), new Date().getTime()));
     }
 }

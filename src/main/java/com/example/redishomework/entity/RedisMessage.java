@@ -13,16 +13,16 @@ import java.util.Date;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Entity(name = "message")
+@Entity(name = "messages")
 public class RedisMessage {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
     private Long id;
     private String channel;
     private String text;
-    private Date timestamp;
+    private Long timestamp;
 
-    public RedisMessage(String channel, String text, Date timestamp) {
+    public RedisMessage(String channel, String text, Long timestamp) {
         this.channel = channel;
         this.text = text;
         this.timestamp = timestamp;

@@ -31,7 +31,7 @@ public class RedisPublishController {
     }
 
     @GetMapping("/getByTime")
-    public List<RedisMessage> getByTime(@RequestParam Date start, @RequestParam Date end) {
+    public List<RedisMessage> getByTime(@RequestParam Long start, @RequestParam Long end) {
         return redisMessageService.getBetween(start, end);
     }
 

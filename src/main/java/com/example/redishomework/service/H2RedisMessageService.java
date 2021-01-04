@@ -26,12 +26,12 @@ public class H2RedisMessageService implements RedisMessageService {
     }
 
     @Override
-    public List<RedisMessage> getBetween(Date start, Date end) {
+    public List<RedisMessage> getBetween(Long start, Long end) {
         return repository.getAllBetweenDates(start, end);
     }
 
     @Override
     public void add(Message message) {
-        repository.save(new RedisMessage(new String(message.getChannel()), new String(message.getBody()), new Date()));
+        repository.save(new RedisMessage(new String(message.getChannel()), new String(message.getBody()), new Date().getTime()));
     }
 }

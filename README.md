@@ -1,3 +1,8 @@
+## Prerequirements?
+Java 8 or higer / Maven are installed
+Redis server is already running on port `6379`
+
+
 ## How to run project?
 To run app you either start from IDEA by running RedisHomeworkApplication or from console `mvn spring-boot:run`
 

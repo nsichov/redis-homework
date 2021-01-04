@@ -1,0 +1,8 @@
+DROP TABLE IF EXISTS messages;
+
+CREATE TABLE messages (
+  id INT PRIMARY KEY,
+  channel VARCHAR(250) NOT NULL,
+  text VARCHAR(250) NOT NULL,
+  timestamp DATETIME NOT NULL
+);
